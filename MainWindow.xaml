@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaletteGenerator"
         mc:Ignorable="d"
-        Title="PaletteGenerator" Height="450" Width="800">
-    <StackPanel Background="#111111">
+        Title="PaletteGenerator" Height="450" Width="800" Background="#111111">
+    <StackPanel Margin="10">
         <Label Content="Generate palette from a color:" Foreground="#999999"/>
         <TextBox x:Name="ColorTb" Height="50" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                  Background="Transparent" Foreground="#999999"/>
