@@ -66,10 +66,6 @@ namespace PaletteGenerator
                 double l = MoveToNumber(value: L, needed: 1, StepL);
                 double s = MoveToNumber(value: S, needed: 0, StepS);
 
-                //Debug.WriteLine($"H: {H} -> {h}");
-                //Debug.WriteLine($"L: {L} -> {l}");
-                //Debug.WriteLine($"S: {S} -> {s}");
-
                 SetHSL(h, l, s);
             }
             else
@@ -78,10 +74,6 @@ namespace PaletteGenerator
                 double h = MoveToNumber(value: H, needed: 240, StepH);
                 double l = MoveToNumber(value: L, needed: 0, StepL);
                 double s = MoveToNumber(value: S, needed: 1, StepS);
-
-                //Debug.WriteLine($"H: {H} -> {h}");
-                //Debug.WriteLine($"L: {L} -> {l}");
-                //Debug.WriteLine($"S: {S} -> {s}");
 
                 SetHSL(h, l, s);
             }
