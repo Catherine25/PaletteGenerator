@@ -6,20 +6,23 @@ using System.Windows.Media;
 
 namespace PaletteGenerator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
 
-
             InitializeComponent();
             OkBt.Click += OkBt_Click;
+            ColorTb.KeyDown += ColorTb_KeyDown;
             Color1Tb.TextChanged += (object sender, TextChangedEventArgs e) => TryShowColor(Color1Tb);
             Color2Tb.TextChanged += (object sender, TextChangedEventArgs e) => TryShowColor(Color2Tb);
+        }
+
+        private void ColorTb_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+                OkBt_Click(null, null);
         }
 
         private void TryShowColor(TextBox box)
