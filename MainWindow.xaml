@@ -1,0 +1,24 @@
+﻿<Window x:Class="PaletteGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaletteGenerator"
+        mc:Ignorable="d"
+        Title="PaletteGenerator" Height="450" Width="800">
+    <StackPanel Background="#111111">
+        <Label Content="Generate palette from a color:" Foreground="#999999"/>
+        <TextBox x:Name="ColorTb" Height="50" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                 Background="Transparent" Foreground="#999999"/>
+        <Button Content="Ok" x:Name="OkBt" Background="Transparent" Foreground="#999999"/>
+        <StackPanel x:Name="Panel" Orientation="Horizontal" Height="100"/>
+
+        <Label Content="Compare colors:" Foreground="#999999"/>
+        <StackPanel Orientation="Horizontal" Height="50">
+            <TextBox x:Name="Color1Tb" Width="75" Background="Transparent" Foreground="#999999" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="Color2Tb" Width="75" Background="Transparent" Foreground="#999999" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Are close?" Width="75" Background="Transparent" Foreground="#999999" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="AreSameTb" Width="75" Background="Transparent" Foreground="#999999" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
