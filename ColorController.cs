@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace PaletteGenerator
@@ -38,17 +37,14 @@ namespace PaletteGenerator
 
     public static class ControlBuilder
     {
-        public static Button CreateColorButton(Color color, string s)
+        public static ColorView CreateColorView(Color color, string s)
         {
             string hex = BitConverter.ToString(new byte[] { color.R, color.G, color.B });
 
-            return new Button
-            {
-                Background = new SolidColorBrush(color),
-                Width = 75,
-                FontSize = 10,
-                Content = hex.Replace("-", string.Empty) + "\n" + s
-            };
+            var cv = new ColorView();
+            cv.Color = color;
+            cv.Text = hex.Replace("-", string.Empty) + "\n" + s;
+            return cv;
         }
     }
 }

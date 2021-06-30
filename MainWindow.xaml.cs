@@ -67,13 +67,9 @@ namespace PaletteGenerator
 
             foreach ((Color, string) item in colors)
             {
-                Button button = ControlBuilder.CreateColorButton(item.Item1, item.Item2);
-                button.Click += Button_Click;
+                ColorView button = ControlBuilder.CreateColorView(item.Item1, item.Item2);
                 Panel.Children.Add(button);
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e) =>
-            Clipboard.SetText(((sender as Button).Content as string).Substring(0, 6));
     }
 }
